@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @recipe.preview.url %>
+<%= image_tag @recipe.preview.url(:medium) %>
+<%= image_tag @recipe.preview.url(:thumb) %>
+
 <p>
   <strong>Title:</strong>
   <%= @recipe.title %>
