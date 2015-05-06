@@ -96,6 +96,8 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    pundit (1.0.0)
+      activesupport (>= 3.0.0)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -178,6 +180,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.2)
+  pundit
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

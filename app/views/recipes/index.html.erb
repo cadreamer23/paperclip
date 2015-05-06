@@ -19,11 +19,9 @@
         <td><%= recipe.instructions %></td>
         <td><%= recipe.user.email %></td>
         <td><%= image_tag recipe.image.url(:thumb) %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <% if recipe.user == current_user %>
-          <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-          <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <td><%= link_to 'Show', recipe if policy(recipe).show? %></td>
+          <td><%= link_to 'Edit', edit_recipe_path(recipe) if policy(recipe).edit? %></td>
+          <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } if policy(recipe).destroy? %></td>
       </tr>
     <% end %>
   </tbody>
